@@ -89,7 +89,18 @@ class Node{
 	   */
 	  
 	   public void postOrderTraversal(Node root){
-         //implement in here
+         if(root == null){
+            return;
+         }
+         
+         //traverse left subtree
+         postOrderTraversal(root.left);
+         
+         //traverse right subtree
+         postOrderTraversal(root.right);
+         
+         //print current node value
+         System.out.print(root.value + " ");
 		   
 	   }
 	   
