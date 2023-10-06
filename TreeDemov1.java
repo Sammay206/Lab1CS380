@@ -100,11 +100,11 @@ class Node{
 	   with a smallest key
 	   */
 	   public int getMin(Node root){
-         while(true){
-            if(root.right == null){
-               return root.value;
-            }
-         }
+         while(root.left != null){
+            root = root.left;
+	      }
+         
+         return root.value;
 
 	      
 	   }
@@ -116,7 +116,6 @@ class Node{
 	   with a largest key
 	   */
 	   public int getMax(Node root){
-         //implement in here
          while(root.right != null){
             root = root.right;
 	      }
@@ -174,6 +173,7 @@ class Node{
 	      t1.insert(90);
 	      t1.insert(22);
          System.out.println("Max: "+ t1.getMax(t1.root));
+         System.out.println("Min: "+ t1.getMin(t1.root));
 	            
 	      System.out.print("in-order :   ");
 	      t1.inOrderTraversal(t1.root);
