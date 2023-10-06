@@ -89,8 +89,17 @@ class Node{
 	   with a specific value
 	   */
 	   public boolean find(Node root, int key){
-		 //implement in here
-		  return false;
+         if(root.value == key) return true;
+         if(root.value < key){
+            if(root.right == null) return false;
+            return find(root.right, key);
+         }
+         if(root.value > key){
+            if(root.left == null) return false;
+            return find(root.left, key);
+         }
+         return false;
+         
 	   }
 	   
 	   
@@ -172,8 +181,6 @@ class Node{
 	      t1.insert(9);
 	      t1.insert(90);
 	      t1.insert(22);
-         System.out.println("Max: "+ t1.getMax(t1.root));
-         System.out.println("Min: "+ t1.getMin(t1.root));
 	            
 	      System.out.print("in-order :   ");
 	      t1.inOrderTraversal(t1.root);
