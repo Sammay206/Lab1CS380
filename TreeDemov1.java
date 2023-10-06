@@ -53,10 +53,10 @@ class Node{
 	      }//closing main if-else 
 	   }
 	   
-	   /*
-	   pre-order traversal
-	   Prints the value of every node preorder
-	   */
+	   /**
+       *A method to print out the binary tree in pre-order
+       *@param The root Node of a binary tree
+       */
 	   public void preOrderTraversal(Node root){
 		if(root == null){
          return;
@@ -75,9 +75,10 @@ class Node{
 
 	   
 	   
-	   /*
-	   in-order traversal
-	   */
+	   /**
+       *A method to print out the binary tree in-order
+       *@param The root Node of a binary tree
+       */
 	   public void inOrderTraversal(Node root){
 	      if(root == null){
             return;
@@ -95,9 +96,10 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   post-order traversal
-	   */
+	   /**
+       *A method to print out the binary tree post-order
+       *@param The root Node of a binary tree
+       */
 	  
 	   public void postOrderTraversal(Node root){
          if(root == null){
@@ -117,10 +119,11 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a specific value
-	   */
+	   /**
+       *A method to find a node in the tree
+       *@param The root Node of a binary tree, the value of a node to find
+       *@return a boolean true if the node is found in the tree
+       */
 	   public boolean find(Node root, int key){
          if(root.value == key) return true;
          if(root.value < key){
@@ -137,10 +140,11 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a smallest key
-	   */
+	   /**
+       *A method to find the smallest node in the tree
+       *@param The root Node of a binary tree
+       *@return the value of the smallest node in the tree
+       */
 	   public int getMin(Node root){
          while(root.left != null){
             root = root.left;
@@ -153,10 +157,11 @@ class Node{
 	  
 	  
 	  
-	   /*
-	   a method to find the node in the tree
-	   with a largest key
-	   */
+	   /**
+       *A method to find the largest node in the tree
+       *@param The root Node of a binary tree
+       *@return the value of the largest node in the tree
+       */
 	   public int getMax(Node root){
          while(root.right != null){
             root = root.right;
